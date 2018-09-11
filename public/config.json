@@ -17,9 +17,6 @@
     "execute": {
       "inArguments": [
         {
-          "emailAddress": "{{Contact.Attribute.Demo-Banco-Inter.EmailAddress}}"
-        },
-        {
           "email": "{{Contact.Default.Email}}"
         },
         {

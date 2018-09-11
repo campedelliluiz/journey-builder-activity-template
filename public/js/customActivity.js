@@ -76,7 +76,6 @@ define([
 
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
-            "emailAddress": "{{Contact.Attribute.Demo-Banco-Inter.EmailAddress}}",
             "email": "{{Contact.Default.Email}}",
             "defaultType": "{{Contact.Default.TIPO}}"
         }];
