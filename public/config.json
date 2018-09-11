@@ -1,77 +1,89 @@
 {
-    "workflowApiVersion": "1.1",
-    "metaData": {
-        "icon": "images/icon.png",
-        "iconSmall": "images/iconSmall.png",
-        "category": "message"
-    },
-    "type": "REST",
-    "lang": {
-        "en-US": {
-            "name": "Fbiz CA",
-          "description": "A Template for a custom Journey Builder activity",
-          "step1Label": "Configure Activity"
-        }
-    },
-    "arguments": {
-        "execute": {
-           "inArguments":[
-			        {
-                    "email": "{{Contact.Default.Email}}"
-               },
-               {
-                    "defaultType": "{{Contact.Default.TIPO}}"
-               }
-			],
-          "outArguments": [],
-          "url": "https://custom-activity-fbiz.herokuapp.com/journeybuilder/execute",
-           "verb": "POST",
-            "body": "",
-            "header": "",
-            "format": "json",
-            "useJwt": true,
-            "timeout": 10000
-        }
-    },
-    "configurationArguments": {
-      "applicationExtensionKey": "1a22af24-4297-412c-a1c5-17983ca1f56b",
-      "save": {
-        "url": "https://custom-activity-fbiz.herokuapp.com/journeybuilder/save",
-          "verb": "POST",
-        "useJwt": true
-       },
-       "publish": {
-        "url": "https://custom-activity-fbiz.herokuapp.com/journeybuilder/publish",
-           "verb": "POST",
-        "useJwt": true
-       },
-      "stop": {
-        "url": "https://custom-activity-fbiz.herokuapp.com/journeybuilder/stop",
-           "verb": "POST",
-        "useJwt": true
-      },
-      "validate": {
-        "url": "https://custom-activity-fbiz.herokuapp.com/journeybuilder/validate",
-        "verb": "POST",
-        "useJwt": true
-      }
-    },
-    "wizardSteps": [
-        { "label": "Configure Activity", "key": "step1" }
-    ],
-    "userInterfaces": {
-        "configModal": {
-            "height": 400,
-            "width": 1000,
-          "fullscreen": false
-        }
-    },
-    "schema": {
-        "arguments": {
-            "execute": {
-                "inArguments": [],
-                "outArguments": []
-            }
-        }
+  "workflowApiVersion": "1.1",
+  "metaData": {
+    "icon": "images/icon.png",
+    "iconSmall": "images/iconSmall.png",
+    "category": "message"
+  },
+  "type": "REST",
+  "lang": {
+    "en-US": {
+      "name": "Fbiz CA",
+      "description": "A Template for a custom Journey Builder activity",
+      "step1Label": "Configure Activity"
     }
+  },
+  "arguments": {
+    "execute": {
+      "inArguments": [
+        {
+          "emailAddress": "{{Contact.Attribute.Demo-Banco-Inter.EmailAddress}}"
+        },
+        {
+          "number": "{{Contact.Attribute.Demo-Banco-Inter.Number}}"
+        },
+        {
+          "text": "{{Contact.Attribute.Demo-Banco-Inter.Text}}"
+        },
+        {
+          "email": "{{Contact.Default.Email}}"
+        },
+        {
+          "defaultType": "{{Contact.Default.TIPO}}"
+        }
+      ],
+      "outArguments": [],
+      "url": "https://custom-activity-fbiz.herokuapp.com/journeybuilder/execute",
+      "verb": "POST",
+      "body": "",
+      "header": "",
+      "format": "json",
+      "useJwt": true,
+      "timeout": 10000
+    }
+  },
+  "configurationArguments": {
+    "applicationExtensionKey": "1a22af24-4297-412c-a1c5-17983ca1f56b",
+    "save": {
+      "url": "https://custom-activity-fbiz.herokuapp.com/journeybuilder/save",
+      "verb": "POST",
+      "useJwt": true
+    },
+    "publish": {
+      "url": "https://custom-activity-fbiz.herokuapp.com/journeybuilder/publish",
+      "verb": "POST",
+      "useJwt": true
+    },
+    "stop": {
+      "url": "https://custom-activity-fbiz.herokuapp.com/journeybuilder/stop",
+      "verb": "POST",
+      "useJwt": true
+    },
+    "validate": {
+      "url": "https://custom-activity-fbiz.herokuapp.com/journeybuilder/validate",
+      "verb": "POST",
+      "useJwt": true
+    }
+  },
+  "wizardSteps": [
+    {
+      "label": "Configure Activity",
+      "key": "step1"
+    }
+  ],
+  "userInterfaces": {
+    "configModal": {
+      "height": 400,
+      "width": 1000,
+      "fullscreen": false
+    }
+  },
+  "schema": {
+    "arguments": {
+      "execute": {
+        "inArguments": [],
+        "outArguments": []
+      }
+    }
+  }
 }
