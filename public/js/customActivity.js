@@ -70,6 +70,7 @@ define([
     }
 
     function save() {
+        console.log('ON SAVE')
         // var postcardURLValue = $('#postcard-url').val();
         // var postcardTextValue = $('#postcard-text').val();
 
@@ -80,7 +81,7 @@ define([
 
         payload['metaData'].isConfigured = true;
 
-        console.log(payload);
+        console.log('payload: ', payload);
         connection.trigger('updateActivity', payload);
     }
 
