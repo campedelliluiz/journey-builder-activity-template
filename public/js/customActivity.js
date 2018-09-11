@@ -1,7 +1,9 @@
 define([
-    'postmonger'
+    'postmonger',
+    'jquery'
 ], function (
-    Postmonger
+    Postmonger,
+    $
 ) {
     'use strict';
 
@@ -15,9 +17,10 @@ define([
     connection.on('requestedEndpoints', onGetEndpoints);
 
     connection.on('clickedNext', save);
-   
+
     function onRender() {
         // JB will respond the first time 'ready' is called with 'initActivity'
+        console.log('ON RENDER');
         connection.trigger('ready');
 
         connection.trigger('requestTokens');
@@ -26,11 +29,12 @@ define([
     }
 
     function initialize(data) {
+        console.log('INITIALIZE!')
         console.log(data);
         if (data) {
             payload = data;
         }
-        
+
         var hasInArguments = Boolean(
             payload['arguments'] &&
             payload['arguments'].execute &&
@@ -44,8 +48,8 @@ define([
 
         $.each(inArguments, function (index, inArgument) {
             $.each(inArgument, function (key, val) {
-                
-              
+
+
             });
         });
 
@@ -66,14 +70,14 @@ define([
     }
 
     function save() {
-        var postcardURLValue = $('#postcard-url').val();
-        var postcardTextValue = $('#postcard-text').val();
+        // var postcardURLValue = $('#postcard-url').val();
+        // var postcardTextValue = $('#postcard-text').val();
 
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
-            "emailAddress": "{{Contact.Attribute.PostcardJourney.EmailAddress}}"
+            "email": "{{Contact.Default.Email}}"
         }];
-        
+
         payload['metaData'].isConfigured = true;
 
         console.log(payload);

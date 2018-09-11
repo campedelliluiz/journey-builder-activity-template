@@ -16,11 +16,12 @@
     "arguments": {
         "execute": {
            "inArguments":[
-				{
-                    "emailAddress": "{{Contact.Attribute.CustomActivity.EmailAddress}}",
-                    "number": "{{Contact.Attribute.CustomActivity.Number}}",
-                    "text": "{{Contact.Attribute.CustomActivity.Text}}"
-                }
+			        {
+                    "email": "{{Contact.Default.Email}}"
+               },
+               {
+                    "defaultType": "{{Contact.Default.TIPO}}"
+               }
 			],
           "outArguments": [],
           "url": "https://custom-activity-fbiz.herokuapp.com/journeybuilder/execute",
