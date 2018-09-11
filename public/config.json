@@ -20,12 +20,6 @@
           "emailAddress": "{{Contact.Attribute.Demo-Banco-Inter.EmailAddress}}"
         },
         {
-          "number": "{{Contact.Attribute.Demo-Banco-Inter.Number}}"
-        },
-        {
-          "text": "{{Contact.Attribute.Demo-Banco-Inter.Text}}"
-        },
-        {
           "email": "{{Contact.Default.Email}}"
         },
         {
