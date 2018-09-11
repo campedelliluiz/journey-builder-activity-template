@@ -18,9 +18,6 @@
       "inArguments": [
         {
           "email": "{{Contact.Default.Email}}"
-        },
-        {
-          "defaultType": "{{Contact.Default.TIPO}}"
         }
       ],
       "outArguments": [],
