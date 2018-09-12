@@ -18,8 +18,7 @@
       "inArguments": [
         {
           "email": "{{Contact.Default.Email}}",
-          "emailAddress": "{{Contact.Attribute.Demo-Banco-Inter2.EmailAddress}}",
-          "emailAddressDois": "{{Contact.Attribute.Demo-Banco-Inter2.Email}}"
+          "emailAddress": "{{Contact.Attribute.Demo-Banco-Inter.EMAIL}}"
         }
       ],
       "outArguments": [],
