@@ -18,6 +18,7 @@
       "inArguments": [
         {
           "email": "{{Contact.Default.Email}}",
+          "celular": "{{Contact.Default.TELEFONE_CELULAR}}",
           "emailAddress": "{{Contact.Attribute.Demo-Banco-Inter.EMAIL}}"
         }
       ],
