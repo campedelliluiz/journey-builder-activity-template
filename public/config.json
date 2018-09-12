@@ -17,8 +17,9 @@
     "execute": {
       "inArguments": [
         {
-          "email": "{{Contact.Default.Email}}",
-          "celular": "{{Contact.Default.TELEFONE_CELULAR}}",
+          "email": "{{Contact.Default.Email}}"
+        },
+        {
           "emailAddress": "{{Contact.Attribute.Demo-Banco-Inter.EMAIL}}"
         }
       ],
