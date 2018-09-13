@@ -20,7 +20,7 @@
           "email": "{{Contact.Default.Email}}"
         },
         {
-          "emailAddress": "{{Contact.Attribute.Demo-Banco-Inter.EMAIL}}"
+          "emailAddress": "{{Contact.Attribute.Demo-Banco-Inter2.EMAIL}}"
         }
       ],
       "outArguments": [],
